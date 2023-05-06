@@ -4,15 +4,15 @@ import base64
 origin_path = 'src/origin/'
 convert_path = 'src/convert/'
 
-def convertImage():
-    with open(origin_path+'/1.png', "rb") as f:
+def convertImage(index):
+    with open(origin_path+f"/{index}.png", "rb") as f:
         img = f.read()
 
     """
         Converting Image
     """
     
-    with open(convert_path+'/1.png', "wb") as f:
+    with open(convert_path+f"/{index}.png", "wb") as f:
         f.write(img)
     
     return img
@@ -30,7 +30,9 @@ def convert():
 
     save_img_from_base64(base64_data, f"{origin_path}/1.png")
 
-    img = convertImage()
+    index = 1
+
+    img = convertImage(index)
 
     img = base64.b64encode(img)
 
