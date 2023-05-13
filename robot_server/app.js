@@ -17,6 +17,12 @@ app.use(Route);
 
 app.set('port', 3000)
 
+app.get('/hi', (req, res) => {
+    setTimeout(function() {
+        res.send("hi")
+    }, 3000)
+})
+
 app.listen(app.get('port'), () => {
     console.log(app.get('port'), ': waiting ....');
 })
