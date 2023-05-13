@@ -1,0 +1,162 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn_home {
+  z-index: 31;
+  width: 40px;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+@font-face {
+  font-family: "S-CoreDream-5";
+  src: url("../assets/font/SCDream5.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body .bg {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+body .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+body .text {
+  width: 100%;
+  height: 5vh;
+  top: 7.3vh;
+  left: 0px;
+  position: absolute;
+  text-align: center;
+}
+body .text p {
+  text-align: center;
+  font-family: "S-CoreDream-5";
+  color: #333333;
+  font-size: 5vh;
+  font-weight: 300;
+}
+body .click_box {
+  width: 100%;
+  height: 64.6vh;
+  top: 17.6vh;
+  left: 0px;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 5;
+}
+body .click_box .box1_c, body .click_box .box2_c, body .click_box .box3_c, body .click_box .box4_c {
+  width: 22vw;
+  height: 100%;
+  cursor: pointer;
+}
+body .select_box {
+  width: 100%;
+  height: 64.6vh;
+  top: 17.6vh;
+  left: 0px;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 3;
+}
+body .select_box .no {
+  width: 22vw;
+  height: 100%;
+  visibility: hidden;
+}
+body .select_box .no .check {
+  visibility: hidden;
+}
+body .select_box .select {
+  z-index: 3;
+  width: 22vw;
+  height: 100%;
+  border-style: solid;
+  border-width: 0.7vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: #262261;
+}
+body .select_box .select .check {
+  width: 4vh;
+  height: 4vh;
+  top: 0px;
+  left: 0px;
+  margin-top: 1vw;
+  margin-left: 18vw;
+}
+body .select_box .select .check img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body .box {
+  width: 100%;
+  height: 64.6vh;
+  top: 17.6vh;
+  left: 0px;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+}
+body .box .box1, body .box .box2, body .box .box3, body .box .box4 {
+  top: 0px;
+  left: 0px;
+  width: 22vw;
+  height: 100%;
+  background-color: white;
+}
+body .box .box1 img, body .box .box2 img, body .box .box3 img, body .box .box4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+body .btn {
+  width: 100%;
+  height: 10vh;
+  top: 85.6vh;
+  left: 0px;
+  text-align: center;
+  position: absolute;
+}
+body .btn img {
+  width: 22vw;
+  height: 100%;
+  object-fit: fill;
+}
+body .click {
+  width: 22vw;
+  height: 10vh;
+  top: 85.6vh;
+  left: 39vw;
+  z-index: 5;
+  text-align: center;
+  position: absolute;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=select_photo.css.map */
