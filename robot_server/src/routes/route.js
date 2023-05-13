@@ -9,6 +9,7 @@ router.get('/take_photo/*', Controller.Photo)
 
 router.get("/convert/*", Controller.Convert)
 
+router.get("/print", Controller.Print)
 // router.get('/take_photo/*',Controller.Camera)
 // router.get('/print', Controller.Print)
 

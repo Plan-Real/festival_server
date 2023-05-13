@@ -65,12 +65,10 @@ setTimeout(function() {
                   method: "GET",
                 })
                 .then((response) => {
-                  setTimeout(function() {
                     console.log(response)
                     if (response.status == 200) {
                       location.replace("select_photo.html")
                     }
-                  }, 2000)
                 })
               }, 3000)
             })

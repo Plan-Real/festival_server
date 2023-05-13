@@ -1,9 +1,11 @@
 const {exec} = require('child_process')
 
-function rotate() {
-    exec('python3 view/assets/photo/rotate.py')
+function rotate(req, res) {
+    exec('python3 view/assets/photo/rotate.py', (err, stdout, stdin) => {
+        res.status(200).json("complete");
+    })
 }
 
-exports.rotate = () => {
-    rotate()
+exports.rotate = (req, res) => {
+    rotate(req, res)
 }

@@ -78,5 +78,9 @@ box4_c.addEventListener("click", e=>{
 const click = document.querySelector(".click")
 
 click.addEventListener("click", e=>{
-    location.replace("intro.html")
+    fetch("http://127.0.0.1:3000/print", {method: "GET"})
+    .then((response) => {
+        console.log("printing...")
+        location.replace("intro.html")
+    })
 })

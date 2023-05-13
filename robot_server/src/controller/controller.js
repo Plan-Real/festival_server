@@ -11,15 +11,9 @@ exports.Page = (req, res) => {
     res.sendFile(path.join(__dirname + '../../../' +link))
 }
 
-exports.Photo = async  (req, res) => {
+exports.Photo = (req, res) => {
     const i = req.params['0']
-    await Photo.take_photo(i)
-    if (i == 4) {
-        setTimeout(function () {
-            Photo_rotate.rotate()
-        },1000)
-    }
-    res.send("complete")
+    var k = Photo.take_photo(req, res, i)
 }
 
 var selected = 0
@@ -67,4 +61,5 @@ exports.Convert = (req, res) => {
 
 exports.Print = (req, res) => {
     Print.exec();
+    res.status(200).json("print_start")
 }
