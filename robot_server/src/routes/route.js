@@ -5,6 +5,10 @@ const Controller = require('../controller/controller.js');
 
 router.get('/page/*', Controller.Page)
 
+router.get('/take_photo/*', Controller.Photo)
+
+router.get("/convert/*", Controller.Convert)
+
 // router.get('/take_photo/*',Controller.Camera)
 // router.get('/print', Controller.Print)
 

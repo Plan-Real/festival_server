@@ -66,6 +66,9 @@ const click = document.querySelector(".click")
 
 click.addEventListener("click", e=>{
     if (selected != 0) {
-        location.replace("loading.html")
+        fetch("http://127.0.0.1:3000/convert/"+selected, {method : "GET"})
+        .then(
+            location.replace("loading.html")
+        )
     }
 })

@@ -36,19 +36,50 @@ if (!navigator.mediaDevices?.enumerateDevices) {
       });
   }
 
+
 getVideo()
+
+
 
 // 카메라 init
 
 // 준비 완료 response 오면 3초마다 촬영 신호
-
-// 마지막 신호의 return 오면 화면전환
-
-
-fetch("http://127.0.0.1:3000/hi" , {
+setTimeout(function() {
+  console.log("hi")
+  fetch("http://127.0.0.1:3000/take_photo/1" , {
     method: "GET",
 })
-    .then((response) => 
-    location.replace("select_photo.html")
+    .then((response) => {
+      setTimeout(function () {
+        fetch("http://127.0.0.1:3000/take_photo/2", {
+          method: "GET",
+        })
+        .then((response) => {{
+          setTimeout(function () {
+            fetch("http://127.0.0.1:3000/take_photo/3", {
+              method: "GET",
+            })
+            .then((response) => {
+              setTimeout(function () {
+                fetch("http://127.0.0.1:3000/take_photo/4", {
+                  method: "GET",
+                })
+                .then((response) => {
+                  setTimeout(function() {
+                    console.log(response)
+                    if (response.status == 200) {
+                      location.replace("select_photo.html")
+                    }
+                  }, 2000)
+                })
+              }, 3000)
+            })
+          }, 3000)
+          }
+        })
+      },3000)
+    }
 
     )
+},5000)
+// 마지막 신호의 return 오면 화면전환

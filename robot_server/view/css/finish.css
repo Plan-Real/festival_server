@@ -142,6 +142,28 @@ body .photo img {
   height: 100%;
   object-fit: fill;
 }
+body .photo_frame {
+  width: 27.5vw;
+  height: 75.3vh;
+  top: 7.5vh;
+  left: 58.7vw;
+  position: absolute;
+}
+body .photo_frame .f1_n, body .photo_frame .f2_n, body .photo_frame .f3_n, body .photo_frame .f4_n {
+  visibility: hidden;
+}
+body .photo_frame .f_y {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+body .photo_frame .f_y img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
 body .btn {
   width: 22.2vw;
   height: 10vh;

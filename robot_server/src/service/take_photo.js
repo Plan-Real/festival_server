@@ -1,4 +1,12 @@
 const cameralib = require('camera-usb')
 const fs = require('fs')
 
-cameralib.capture().pipe(fs.createWriteStream('out.jpg'))
+
+function take_photo(i) {
+    cameralib.capture().pipe(fs.createWriteStream('view/assets/photo/'+ i.toString() +'.jpg'))
+}
+
+
+exports.take_photo = (i) => {
+    take_photo(i)
+}
