@@ -1,0 +1,62 @@
+@charset 'UTF-8';
+@import "reset";
+body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .bg {
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        position: absolute;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+
+    .text {
+        width: 100%;
+        height: 13.6vh;
+        position: absolute;
+        top:20vh;
+        left: 0px;
+
+        p {
+            text-align: center;
+            font-family:  'S-CoreDream-5';
+            color: #262261;
+            font-size: 6.3vh;
+        }
+    }
+
+    .footer {
+        width: 100%;
+        height: 8.6vh;
+        bottom: 0px;
+        left: 0px;
+        background-color: #262261;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .ferris_wheel {
+        width: 100%;
+        height: 63.6vh;
+        top:31vh;
+        left: 0px;
+        position: absolute;
+        text-align: center;
+        z-index: 3;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}

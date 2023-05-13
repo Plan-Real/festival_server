@@ -7,7 +7,7 @@ function getVideo() {
 
     navigator.getMedia({
         video: {
-            // deviceId:"ec24fa6365362930858ecd21b8f258fce23c1ab63fe6e39a8a8082ffeda769e0"
+            deviceId:"a48df34bf10729b6ec3f59abf9f3a74fdb1cbd0586ba739667ec5679bdfd5d59"
         }, 
         audio: false
     },

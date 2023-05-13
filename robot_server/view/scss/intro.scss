@@ -1,0 +1,70 @@
+@charset 'UTF-8';
+@import "reset";
+body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .intro {
+        position: absolute;
+        z-index: 3;
+        height: 40vh;
+        width: 100vw;
+        top: 3vh;
+        left: 0vw;
+        p {
+            text-align: center;
+            font-family:  'S-CoreDream-5';
+            color: #262261;
+            font-size: 3vh;
+            // line-height: 6vh;
+        }   
+    }
+
+    .bg {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+
+    .text {
+        position: absolute;
+        height: 40vh;
+        width: 100vw;
+        top: 80vh;
+        left: 0vw;
+        animation: fadein_out 3s ease-in-out infinite;
+        p {
+            text-align: center;
+            font-family:  'S-CoreDream-5';
+            color: #262261;
+            font-size: 6vh;
+            line-height: 6vh;
+        }   
+    }
+
+    .click_bg{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 5;
+        cursor: pointer;
+    }
+}
+
+@keyframes fadein_out {
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
