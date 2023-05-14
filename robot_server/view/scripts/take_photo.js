@@ -1,18 +1,31 @@
 var myVideoStream = document.getElementById('myVideo');
 
 var myStoredInterval = 0;
+MediaStreamTrack.videoKind = "RGB"
 
 function getVideo() {
-    navigator.getMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+    navigator.getMedia = navigator.getUserMedia
+    // console.log(navigator.getMedia)
+    // const i = getMedia.devices
+    // console.log(i)
+
+    // || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
 
     navigator.getMedia({
         video: {
-            deviceId:"a48df34bf10729b6ec3f59abf9f3a74fdb1cbd0586ba739667ec5679bdfd5d59"
+          deviceId: "df94225a577159a4e1528476b659f5d751b18266d97828f8e5034b384271e55c",
+          // depth: 'false'
+
+            // deviceId:"a48df34bf10729b6ec3f59abf9f3a74fdb1cbd0586ba739667ec5679bdfd5d59"
         }, 
-        audio: false
+        audio: false,
+        depth: false
     },
     function(stream) {
-        myVideoStream.srcObject = stream   
+      // console.log(stream.mediaStreamTrack()[0].getSettings())
+      // stream.getVideoTrack
+      // console.log(stream)
+        myVideoStream.srcObject = stream
         myVideoStream.play();
     }, 
                        
@@ -24,9 +37,13 @@ function getVideo() {
 if (!navigator.mediaDevices?.enumerateDevices) {
     console.log("enumerateDevices() not supported.");
   } else {
+    console.log(navigator.mediaDevices)
     // List cameras and microphones.
     navigator.mediaDevices.enumerateDevices()
       .then((devices) => {
+        var video = devices.filter(device => device.kind === 'videoinput');
+        const rgbcamera = video.find(device => device.label.includes('RGB'))
+        console.log(rgbcamera.deviceId)
         devices.forEach((device) => {
           console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`);
         });
@@ -36,10 +53,62 @@ if (!navigator.mediaDevices?.enumerateDevices) {
       });
   }
 
-
 getVideo()
 
+// 미디어 장치 정보를 가져오는 함수
+// function getMediaDevices() {
+//   if (navigator.mediaDevices && navigator.mediaDevices.enumerateDevices) {
+//     return navigator.mediaDevices.enumerateDevices();
+//   } else {
+//     return new Promise(function(resolve, reject) {
+//       MediaStreamTrack.getSources(resolve);
+//     });
+//   }
+// }
 
+// // RGB 카메라 스트림 얻기
+// async function getRGBCameraStream() {
+//   const devices = await getMediaDevices();
+//   const videoDevices = devices.filter(device => device.kind === 'videoinput');
+//   const rgbCameraDevice = videoDevices.find(device => device.label.includes('RGB'));
+//   console.log(devices)
+  
+//   if (rgbCameraDevice) {
+//     const constraints = {
+//       video: {
+//         deviceId: { exact: rgbCameraDevice.deviceId },
+//         videoKind: { exact: 'RGB8'
+
+//         }
+//       }
+//     };
+
+//     try {
+//       const stream = await navigator.mediaDevices.getUserMedia(constraints);
+//       return stream;
+//     } catch (error) {
+//       console.error('Failed to get RGB camera stream:', error);
+//       return null;
+//     }
+//   } else {
+//     console.error('RGB camera not found');
+//     return null;
+//   }
+// }
+
+// // RGB 카메라 스트림으로 변경
+// async function switchToRGBCamera() {
+//   const rgbCameraStream = await getRGBCameraStream();
+  
+//   if (rgbCameraStream) {
+//     const myVideoStream = document.getElementById('myVideo');
+//     myVideoStream.srcObject = rgbCameraStream;
+//     myVideoStream.play();
+//   }
+// }
+
+// // RGB 카메라로 변경
+// switchToRGBCamera();
 
 // 카메라 init
 
@@ -67,7 +136,7 @@ setTimeout(function() {
                 .then((response) => {
                     console.log(response)
                     if (response.status == 200) {
-                      location.replace("select_photo.html")
+                      // location.replace("select_photo.html")
                     }
                 })
               }, 3000)
