@@ -1,0 +1,278 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn_home {
+  z-index: 31;
+  width: 40px;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+@font-face {
+  font-family: "S-CoreDream-5";
+  src: url("../assets/font/SCDream5.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body .bg {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+body .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+body .click_box, body .box_frame {
+  width: 6vw;
+  height: 52.5vh;
+  position: absolute;
+  top: 36.3vh;
+  left: 83.5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+body .click_box .box1_c, body .click_box .box2_c, body .click_box .box3_c, body .click_box .box4_c, body .box_frame .box1_c, body .box_frame .box2_c, body .box_frame .box3_c, body .box_frame .box4_c {
+  width: 6vw;
+  height: 6vw;
+  z-index: 3;
+  cursor: pointer;
+}
+body .click_box .f1, body .click_box .f2, body .click_box .f3, body .click_box .f4, body .box_frame .f1, body .box_frame .f2, body .box_frame .f3, body .box_frame .f4 {
+  width: 15vw;
+  height: 40.8vh;
+  z-index: 3;
+}
+body .click_box .f1 img, body .click_box .f2 img, body .click_box .f3 img, body .click_box .f4 img, body .box_frame .f1 img, body .box_frame .f2 img, body .box_frame .f3 img, body .box_frame .f4 img {
+  width: 100%;
+  height: 100%;
+}
+body .select_box {
+  width: 31.7vw;
+  height: 84.6vh;
+  position: absolute;
+  top: 7.6vh;
+  left: 11.7vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+body .select_box .no {
+  width: 15vw;
+  height: 40.8vh;
+  visibility: hidden;
+}
+body .select_box .no .check {
+  visibility: hidden;
+}
+body .select_box .select {
+  visibility: hidden;
+}
+body .box {
+  width: 6vw;
+  height: 52.5vh;
+  position: absolute;
+  top: 36.3vh;
+  left: 83.5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+body .box .box1, body .box .box2, body .box .box3, body .box .box4 {
+  width: 6vw;
+  height: 6vw;
+}
+body .box .box1 img, body .box .box2 img, body .box .box3 img, body .box .box4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 3;
+}
+body .photo {
+  width: 59.2vw;
+  height: 40vw;
+  top: 13vh;
+  left: 20.4vw;
+  background-color: white;
+  position: absolute;
+}
+body .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+body .photo_frame {
+  width: 59.2vw;
+  height: 40vw;
+  top: 13vh;
+  left: 20.4vw;
+  position: absolute;
+}
+body .photo_frame .f1_n, body .photo_frame .f2_n, body .photo_frame .f3_n, body .photo_frame .f4_n {
+  visibility: hidden;
+}
+body .photo_frame .f_y {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+body .photo_frame .f_y img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+body .btn {
+  width: 22.2vw;
+  height: 10vh;
+  position: absolute;
+  top: 85.6vh;
+  left: 38.9vw;
+}
+body .btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+body .click {
+  width: 22.2vw;
+  height: 10vh;
+  position: absolute;
+  top: 85.6vh;
+  left: 38.9vw;
+  z-index: 5;
+  cursor: pointer;
+}
+body .back_bg {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #000000;
+  opacity: 0.5;
+  position: absolute;
+}
+body .announce {
+  width: 58.9vw;
+  height: 45vh;
+  top: 27.5vh;
+  position: absolute;
+  left: 20.55vw;
+  z-index: 4;
+}
+body .announce img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 5;
+}
+body .announce .announce_btn2 {
+  width: 50.6vw;
+  height: 10vh;
+  top: 30.9vh;
+  left: 4.15vw;
+  position: absolute;
+  cursor: pointer;
+  z-index: 6;
+}
+body .announce .off {
+  visibility: hidden;
+}
+body .an_click {
+  width: 58.9vw;
+  height: 45vh;
+  top: 27.5vh;
+  position: absolute;
+  left: 20.55vw;
+  z-index: 4;
+}
+body .an_click .box {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+body .an_click .box img {
+  object-fit: fill;
+}
+body .an_click .warn {
+  width: 9.5vw;
+  height: 16.3vh;
+  top: 2vh;
+  left: 25vw;
+  position: absolute;
+}
+body .an_click .warn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body .an_click .text1 {
+  width: 100%;
+  height: 100%;
+  top: 20.3vh;
+  left: 0px;
+  position: absolute;
+}
+body .an_click .text1 p {
+  text-align: center;
+  font-family: "S-CoreDream-5";
+  color: #262261;
+  font-size: 6vh;
+}
+body .an_click .an_click_box {
+  width: 100%;
+  height: 30%;
+  top: 66%;
+  left: 0px;
+  position: absolute;
+  text-align: center;
+}
+body .an_click .an_click_box img {
+  width: 80%;
+  height: 90%;
+  object-fit: contain;
+  position: absolute;
+  right: 10%;
+}
+body .an_click .an_click_box .text {
+  width: 80%;
+  height: 90%;
+  position: absolute;
+  right: 10%;
+  top: 30%;
+}
+body .an_click .an_click_box .text p {
+  text-align: center;
+  font-family: "S-CoreDream-5";
+  color: #262261;
+  font-size: 4vh;
+}
+body .an_click .off {
+  visibility: hidden;
+}
+
+/*# sourceMappingURL=finish.css.map */
