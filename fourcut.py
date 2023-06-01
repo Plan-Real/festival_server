@@ -28,6 +28,6 @@ conn = cups.Connection()
 printers = list(conn.getPrinters().keys())
 printer_name = printers[1]
 print(printers)
-# conn.printFile(printer_name, './test.png',"Test",{}) 
+conn.printFile(printer_name, 'view/photo/convert.jpg',"Test",{}) 
 
 
