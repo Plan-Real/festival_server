@@ -1,0 +1,290 @@
+@charset 'UTF-8';
+@import "reset";
+body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .bg {
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        position: absolute;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+
+    .click_box, .box_frame {
+        width: 6vw;
+        height: 52.5vh;
+        position: absolute;
+        top: 36.3vh;
+        left: 83.5vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .box1_c, .box2_c, .box3_c, .box4_c {
+            width: 6vw;
+            height: 6vw;
+            z-index: 3;
+            cursor: pointer;
+        }
+
+        .f1, .f2, .f3, .f4 {
+            width: 15vw;
+            height: 40.8vh;
+            z-index: 3;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .select_box {
+        width: 31.7vw;
+        height: 84.6vh;
+        position: absolute;
+        top: 7.6vh;
+        left: 11.7vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .no {
+            width: 15vw;
+            height: 40.8vh;
+            visibility: hidden;
+
+            .check {
+                visibility: hidden;
+            }
+        }
+
+        .select {
+            visibility: hidden;
+        }
+    }
+
+    .box {
+        width: 6vw;
+        height: 52.5vh;
+        position: absolute;
+        top: 36.3vh;
+        left: 83.5vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .box1 ,.box2, .box3, .box4 {
+            width: 6vw;
+            height: 6vw;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                z-index: 3;
+                // filter: invert(80%);
+            }
+        }
+    }
+
+    .photo {
+        width: 59.2vw;
+        height: 40vw;
+        top: 13vh;
+        left: 20.4vw;
+        background-color: white;
+        position: absolute;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+
+    .photo_frame {
+        width: 59.2vw;
+        height: 40vw;
+        top: 13vh;
+        left: 20.4vw;
+        position: absolute;
+
+        .f1_n, .f2_n, .f3_n, .f4_n {
+            visibility: hidden;
+        }
+
+        .f_y {
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+            }
+        }
+    }
+
+    .btn {
+        width: 22.2vw;
+        height: 10vh;
+        position: absolute;
+        top: 85.6vh;
+        left: 38.9vw;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+
+    .click {
+        width: 22.2vw;
+        height: 10vh;
+        position: absolute;
+        top: 85.6vh;
+        left: 38.9vw;
+        z-index: 5;
+        cursor: pointer;
+    }
+
+    .back_bg {
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background-color: #000000;
+        opacity: 0.5;
+        position: absolute;
+    }
+
+    .announce {
+        width: 58.9vw;
+        height: 45vh;
+        top: 27.5vh;
+        position: absolute;
+        left: 20.55vw;
+        z-index: 4;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            z-index: 5;
+        }
+
+        .announce_btn2 {
+            width: 50.6vw;
+            height: 10vh;
+            top: 30.9vh;
+            left: 4.15vw;
+            position: absolute;
+            cursor: pointer;
+            z-index: 6;
+        }
+
+        .off {
+            visibility: hidden;
+        }
+    }
+
+    .an_click {
+        width: 58.9vw;
+        height: 45vh;
+        top: 27.5vh;
+        position: absolute;
+        left: 20.55vw;
+        z-index: 4;
+
+        .box {
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+
+            img {
+                object-fit: fill;
+            }
+        }
+        .warn {
+            width: 9.5vw;
+            height: 16.3vh;
+            top: 2vh;
+            left: 25vw;
+            position: absolute;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .text1 {
+            width: 100%;
+            height: 100%;
+            top: 20.3vh;
+            left: 0px;
+            position: absolute;
+
+            p {
+                text-align: center;
+                font-family:  'S-CoreDream-5';
+                color: #262261;
+                font-size: 6vh;
+            }
+        }
+
+        .an_click_box {
+            width: 100%;
+            height: 30%;
+            top: 66%;
+            left: 0px;
+            position: absolute;
+            text-align: center;
+
+            .box {
+                width: 100%;
+                height: 100%;
+            }
+
+            img {
+                width: 80%;
+                height: 90%;
+                object-fit: contain;
+                position: absolute;
+                right: 10%;
+            }
+
+            .text {
+                width: 80%;
+                height: 90%;
+                position: absolute;
+                right: 10%;
+                top: 30%;
+
+                p {
+                    text-align: center;
+                    font-family:  'S-CoreDream-5';
+                    color: #262261;
+                    font-size: 4vh;
+                }
+            }
+        }
+
+        .off {
+            visibility: hidden;
+        }
+    }
+}

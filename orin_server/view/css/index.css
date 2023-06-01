@@ -1,0 +1,142 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn_home {
+  z-index: 31;
+  width: 40px;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+@font-face {
+  font-family: "S-CoreDream-5";
+  src: url("../assets/font/SCDream5.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+body .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body .intro {
+  width: 100%;
+  height: 100%;
+  top: 16vh;
+  left: 0px;
+  position: absolute;
+  text-align: center;
+}
+body .intro img {
+  object-fit: contain;
+}
+body .box {
+  width: 100vw;
+  height: 17vh;
+  top: 39vh;
+  left: 16vw;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .box .img1, body .box .img2, body .box .img3 {
+  width: 27.5vw;
+  height: 100%;
+  position: absolute;
+}
+body .box .img1 img, body .box .img2 img, body .box .img3 img {
+  object-fit: fill;
+}
+body .box .n1, body .box .n2 {
+  top: 10vh;
+  width: 4vw;
+  height: 7vh;
+  position: absolute;
+}
+body .box .n1 img, body .box .n2 img {
+  object-fit: fill;
+}
+body .box .img1 {
+  right: 70vw;
+}
+body .box .n1 {
+  right: 75vw;
+}
+body .box .img2 {
+  right: 46vw;
+}
+body .box .n2 {
+  right: 51.5vw;
+}
+body .box .img3 {
+  right: 22.5vw;
+}
+body .click {
+  width: 30vw;
+  height: 15vh;
+  top: 76.5vh;
+  left: 35vw;
+  position: absolute;
+  z-index: 5;
+  cursor: pointer;
+}
+body .text {
+  width: 100vw;
+  height: 15vh;
+  top: 76.5vh;
+  left: 0vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .text p {
+  text-align: center;
+  font-family: "S-CoreDream-5";
+  font-weight: 600;
+  font-size: 6vh;
+  line-height: 6vh;
+}
+body .btn {
+  width: 100vw;
+  height: 15vh;
+  top: 76.5vh;
+  left: 0vh;
+  position: absolute;
+  text-align: center;
+}
+body .btn .img {
+  height: 15vh;
+  z-index: 2;
+}
+body .btn .img img {
+  object-fit: fill;
+}
+
+/*# sourceMappingURL=index.css.map */
