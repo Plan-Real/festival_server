@@ -2,7 +2,7 @@
 
 ## Description
 
----
+
 
 PlanR festival UI is used for user-interaction as the UI of a web-based robot arm photo robot or box-type photo robot
 
@@ -17,9 +17,6 @@ This project starts shooting through user interaction, converts the captured pho
 - **image convert using AI :** The image received from the main server is converted into a cartoon-like picture by passing it through animeGAN. The photo is sent back to the UI server.
 
 ## Installation
-
----
-
 ### Requirements
 
 For development, you will only need Node.js 
@@ -85,15 +82,11 @@ After entire installations, you just run the following command in the dircetory 
 
 ## Techiques and Tools
 
----
-
 - **Main_server** : The existing AnimeGAN model was implemented in API form using Flask. If you send a post request with /convert with an image in the body, it will be saved in the database and AI-converted as a response.
 - **Web Component :** While rendering the camera stream, one frame is sent to the server according to the signal, giving the effect of taking a picture.
 - **Orin_server :** A GET request is sent to another nodejs server that communicates with the robot arm through rosnodejs to send a trigger for the robot arm to move.
 
 ## Architecture
-
----
 
 All connections go through the router to the controller. The controller calls and executes different services depending on the type of request.
 
@@ -110,8 +103,6 @@ All connections go through the router to the controller. The controller calls an
         
 
 ## Support & License
-
----
 
 ### Browser support
 
