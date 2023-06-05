@@ -6,7 +6,7 @@
 
 PlanR festival UI is used for user-interaction as the UI of a web-based robot arm photo robot or box-type photo robot
 
-### Project breif
+### Project brief
 
 This project starts shooting through user interaction, converts the captured photos through an image conversion AI model(based on animeGAN) server and sends output signals to the cannon selphy CP1300 printer to sell photo cards. This project was used in Hanyang University Erica Spring Festival in 2023 and drew a lot of people's response
 
