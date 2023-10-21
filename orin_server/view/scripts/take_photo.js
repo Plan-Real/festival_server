@@ -132,7 +132,7 @@ setTimeout(function() {
                                           
                                         })
                                         setTimeout(function() {
-                                          // location.replace('select_photo.html')
+                                          location.replace('select_photo.html')
                                         },3000)
                                       })
                                     }
