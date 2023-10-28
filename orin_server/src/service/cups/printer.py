@@ -31,8 +31,9 @@ import os
 
 conn = cups.Connection()
 printers = list(conn.getPrinters().keys())
-printer_name = printers[-1]
+printer_name = printers[0]
 # path = os.path.join(os.path.dirname(__file__), "../../../view/assets/photo/merge.jpg")
+
 conn.printFile(printer_name,
                output_path,"",{
                    "media-bottom-margin-supported" : "0",

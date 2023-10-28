@@ -31,7 +31,12 @@ save_path_o = os.path.join(os.path.dirname(__file__), "src/save/origin/")
 save_path_c = os.path.join(os.path.dirname(__file__), "src/save/convert/")
 
 def convertImage(index):
-    img = Image.open(origin_path).convert("RGB")
+    # img = Image.open(origin_path).convert("RGB")
+    # print(img)
+    import cv2
+    img = cv2.imread(origin_path)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    img = cv2.resize(img, (1980, 1280), interpolation=cv2.INTER_LANCZOS4)
 
     #####################
     ''' convert Image '''
@@ -96,7 +101,7 @@ def convert():
     return img
 
 @app.route('/print', methods=['GET'])
-def print():
+def print_():
     conn = cups.Connection()
     printers = list(conn.getPrinters().keys())
     printer_name = printers[0]
